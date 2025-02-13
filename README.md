@@ -70,7 +70,7 @@ By default, the server will run at `http://127.0.0.1:4567/`
 **Response:**
 `````
 {
-  "message": "Usuario registrado",
+  "message": "Registered user",
   "account_number": "abcdef123456"
 }
 `````

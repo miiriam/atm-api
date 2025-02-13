@@ -2,7 +2,7 @@ require 'bcrypt'
 
 class User < ActiveRecord::Base
   validates :account_number, presence: true, uniqueness: true
-  validates :pin, presence: true, length: { is: 60 } # Para almacenar hash bcrypt
+  validates :pin, presence: true, length: { is: 60 } # To store bcrypt hashes
   validates :balance, numericality: { greater_than_or_equal_to: 0 }
 
   def pin=(new_pin)

@@ -7,7 +7,6 @@ require_relative './controllers/transactions_controller'
 # Defining the app as a modular class
 class ATMApp < Sinatra::Base
   configure do
-    # set :database, { adapter: 'sqlite3', database: 'db/atm.db' }
     set :database, YAML.safe_load(File.read('config/database.yml'), aliases: true)[ENV['RACK_ENV'] || 'development']
   end
 
